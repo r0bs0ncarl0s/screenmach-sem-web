@@ -4,9 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.JsonMappingException;
-
 import br.com.alura.screenmatch.model.DadosCEP;
 import br.com.alura.screenmatch.model.DadosEpisodio;
 import br.com.alura.screenmatch.model.DadosSerie;
@@ -55,6 +52,9 @@ public class Principal {
 						listDadosTemporada.add(dadosTemporada);
 					}
 					listDadosTemporada.forEach(System.out::println);
+					
+					//USANDO LAMBDA
+					listDadosTemporada.forEach(t -> t.episodios().forEach(e -> System.out.println(e.titulo())));
 				}
 			}
 		}catch (Exception e) {
