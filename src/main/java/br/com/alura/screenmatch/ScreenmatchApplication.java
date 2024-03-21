@@ -18,5 +18,6 @@ public class ScreenmatchApplication implements CommandLineRunner{
 		Principal principal = new Principal(); 
 		principal.buscarSeriePor("nome");
 		principal.buscarCEP();
+		principal.exemploStream();
 	}
 }
